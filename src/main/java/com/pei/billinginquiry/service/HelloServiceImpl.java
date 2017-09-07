@@ -1,5 +1,8 @@
 package com.pei.billinginquiry.service;
 
+import com.pei.billinginquiry.dao.HelloDAO;
+import com.pei.billinginquiry.model.Hello;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,5 +12,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class HelloServiceImpl implements HelloService
 {
+    @Autowired
+    private HelloDAO helloDAO;
 
+    @Override
+    public Hello getLastPolicy() {
+        return helloDAO.getLastPolicy();
+    }
+    
 }
