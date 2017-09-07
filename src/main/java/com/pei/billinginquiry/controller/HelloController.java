@@ -2,6 +2,8 @@ package com.pei.billinginquiry.controller;
 
 import com.pei.billinginquiry.model.Hello;
 import com.pei.billinginquiry.service.HelloService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,11 +17,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class HelloController
 {
+    private final Logger logger = LoggerFactory.getLogger(HelloController.class);
+    
     @Autowired
     private HelloService helloService;
     
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = {"", "/"}, method = RequestMethod.GET)
     public Hello getHelloWorld() {
-        return helloService.getLastPolicy();
+        Hello hello = helloService.getLastPolicy();
+        logger.debug("First web services invoked {}" , hello);
+        return hello;
     }
 }

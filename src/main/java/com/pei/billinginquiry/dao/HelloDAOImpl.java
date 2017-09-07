@@ -18,6 +18,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class HelloDAOImpl implements HelloDAO
 {
+    
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
