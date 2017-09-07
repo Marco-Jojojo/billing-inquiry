@@ -1,6 +1,6 @@
-package com.pei.billinginquiry.dao;
+package com.pei.billinginquiry.example.dao;
 
-import com.pei.billinginquiry.model.Hello;
+import com.pei.billinginquiry.example.model.Hello;
 import com.pei.billinginquiry.util.StoredProcedures;
 import java.sql.ResultSet;
 import java.sql.SQLException;

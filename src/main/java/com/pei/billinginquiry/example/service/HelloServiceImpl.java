@@ -1,7 +1,7 @@
-package com.pei.billinginquiry.service;
+package com.pei.billinginquiry.example.service;
 
-import com.pei.billinginquiry.dao.HelloDAO;
-import com.pei.billinginquiry.model.Hello;
+import com.pei.billinginquiry.example.dao.HelloDAO;
+import com.pei.billinginquiry.example.model.Hello;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

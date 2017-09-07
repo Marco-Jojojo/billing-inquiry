@@ -1,4 +1,4 @@
-package com.pei.billinginquiry.model;
+package com.pei.billinginquiry.example.model;
 
 /**
  * @author Marco Alvarado <marco.alvarado@softtek.com>

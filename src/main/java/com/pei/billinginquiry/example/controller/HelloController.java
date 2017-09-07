@@ -1,7 +1,7 @@
-package com.pei.billinginquiry.controller;
+package com.pei.billinginquiry.example.controller;
 
-import com.pei.billinginquiry.model.Hello;
-import com.pei.billinginquiry.service.HelloService;
+import com.pei.billinginquiry.example.model.Hello;
+import com.pei.billinginquiry.example.service.HelloService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

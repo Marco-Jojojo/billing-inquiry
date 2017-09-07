@@ -1,6 +1,6 @@
-package com.pei.billinginquiry.dao;
+package com.pei.billinginquiry.example.dao;
 
-import com.pei.billinginquiry.model.Hello;
+import com.pei.billinginquiry.example.model.Hello;
 
 /**
  * @author Marco Alvarado <marco.alvarado@softtek.com>
