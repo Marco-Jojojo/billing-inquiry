@@ -38,7 +38,7 @@ class HelloMapper implements RowMapper<Hello>
 
     @Override
     public Hello mapRow(ResultSet rs, int i) throws SQLException {
-        Hello hello = new Hello(rs.getString(0));
+        Hello hello = new Hello(rs.getString("POLICY"));
         return hello;
     }
 
