@@ -6,9 +6,9 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
+ * Model for Filenet documents.
  * @author Marco Alvarado <marco.alvarado@softtek.com>
  * @date Sep 7, 2017
- * Model for Filenet documents
  */
 public class FilenetDoc implements Serializable
 {
@@ -28,7 +28,7 @@ public class FilenetDoc implements Serializable
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="MM/dd/yyyy HH:mm:ss")
     private Timestamp effectiveDate;
     private int submissionNumber;
-    private int policySuffix;
+    private int revision;
     private String policyType;
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="MM/dd/yyyy HH:mm:ss")
     private Timestamp dateReceived;
@@ -142,12 +142,12 @@ public class FilenetDoc implements Serializable
     }
 
     @JsonProperty("REVISION")
-    public int getPolicySuffix() {
-        return policySuffix;
+    public int getRevision() {
+        return revision;
     }
 
-    public void setPolicySuffix(int policySuffix) {
-        this.policySuffix = policySuffix;
+    public void setRevision(int revision) {
+        this.revision = revision;
     }
 
     @JsonProperty("POLICY_TYPE")
