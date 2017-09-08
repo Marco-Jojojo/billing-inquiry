@@ -17,18 +17,18 @@ import org.springframework.web.bind.annotation.RestController;
  * @date Sep 7, 2017
  */
 @RestController
-@RequestMapping("/GetFilenetDocByDateRange")
+@RequestMapping("/BillingInquiry")
 public class FilenetDocController
 {
     @Autowired
     private FilenetDocService filenetDocService;
     
     /**
-     * Exposes Web Service in http://host:8080/GetFilenetDocByDateRange which receives the FilenetDocParams parameters: fromDate, toDate, and agencyCode.
+     * Exposes Web Service in http://host:8080/BillingInquiry/GetFilenetDocByDateRange which receives the FilenetDocParams parameters: fromDate, toDate, and agencyCode.
      * @param filenetDocParams FilenetDocParams parameters: fromDate, toDate, and agencyCode.
      * @return JSON list of FilenetDoc.
      */
-    @RequestMapping(value = {"", "/"}, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = {"/GetFilenetDocByDateRange**"}, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public List<FilenetDoc> getFilenetDocByDateRange(@RequestBody FilenetDocParams filenetDocParams) {
         return filenetDocService.getFilenetDocByDateRange(filenetDocParams);
     }
