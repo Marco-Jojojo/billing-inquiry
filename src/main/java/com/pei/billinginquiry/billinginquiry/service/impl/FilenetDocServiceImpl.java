@@ -1,8 +1,9 @@
-package com.pei.billinginquiry.billinginquiry.service;
+package com.pei.billinginquiry.billinginquiry.service.impl;
 
 import com.pei.billinginquiry.billinginquiry.dao.FilenetDocDAO;
 import com.pei.billinginquiry.billinginquiry.model.FilenetDoc;
 import com.pei.billinginquiry.billinginquiry.model.FilenetDocParams;
+import com.pei.billinginquiry.billinginquiry.service.FilenetDocService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

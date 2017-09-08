@@ -1,5 +1,6 @@
-package com.pei.billinginquiry.billinginquiry.dao;
+package com.pei.billinginquiry.billinginquiry.dao.impl;
 
+import com.pei.billinginquiry.billinginquiry.dao.FilenetDocDAO;
 import com.pei.billinginquiry.billinginquiry.model.FilenetDoc;
 import com.pei.billinginquiry.util.StoredProcedures;
 import java.sql.ResultSet;
