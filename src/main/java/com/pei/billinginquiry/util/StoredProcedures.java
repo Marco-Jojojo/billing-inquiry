@@ -7,7 +7,18 @@ package com.pei.billinginquiry.util;
  */
 public class StoredProcedures
 {
+    /**
+     * Stored Procedure to get the last policy created (for hello world example).
+     */
     public static final String LAST_POLICY_CREATED = "EXEC dbo.getLastPolicyCreatedTest ";
+    
+    /**
+     * Stored Procedure to get the Filenet Documents information.
+     */
     public static final String GET_FILENET_DOC_BY_DATE = "EXEC dbo.getFilenetDocByDate @FromDate = ?, @ToDate = ?, @Agency = ? ";
-    public static final String GET_BILLING_DATA = "EXEC dbo.getBillingData @SubmissionNumber = ?, @AgencyCode = ? ";
+    
+    /**
+     * Stored PRocedure to get the Billing Data information.
+     */
+    public static final String GET_BILLING_DATA = "EXEC dbo.getBillingData @AgencyCode = ?, @SubmissionNumber = ? ";
 }

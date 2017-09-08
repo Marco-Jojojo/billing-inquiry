@@ -15,3 +15,22 @@ In order to compile and run the application, please:
     2. mvn spring-boot:run
     3. Directly from the IDE
 4. The application will be exposed in http://localhost:8080/
+
+### Examples of WS:
+
+http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange
+Method: POST
+Parameters (application/json media type):
+{
+	"fromDate" : "2015-01-01",
+	"toDate" : "2017-09-07",
+	"agencyCode": 32000
+}
+
+http://localhost:8080/BillingInquiry/GetBillingData
+Method: POST
+Parameters (application/json media type):
+{
+	"agencyCode": "32000",
+	"policyKey": 423193
+}
