@@ -3,6 +3,7 @@ package com.pei.billinginquiry.billinginquiry.model;
 import java.io.Serializable;
 
 /**
+ * Parameters to call Filenet Documents' web service.
  * @author Marco Alvarado <marco.alvarado@softtek.com>
  * @date Sep 7, 2017
  */
