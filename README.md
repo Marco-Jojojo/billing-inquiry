@@ -33,3 +33,11 @@ In order to compile and run the application, please:
         "agencyCode": "32000",
         "policyKey": 423193
     }
+    
+    http://localhost:8080/BillingInquiry/GetPolicyDetail
+    Method: POST
+    Parameters (application/json media type):
+    {
+        "agencyCode": "72500",
+        "policyKey": 100320
+    }
