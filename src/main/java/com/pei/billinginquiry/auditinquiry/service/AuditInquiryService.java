@@ -1,6 +1,6 @@
-package com.pei.billinginquiry.billinginquiry.service;
+package com.pei.billinginquiry.auditinquiry.service;
 
-import com.pei.billinginquiry.billinginquiry.model.AuditInquiry;
+import com.pei.billinginquiry.auditinquiry.model.AuditInquiry;
 
 import java.util.List;
 

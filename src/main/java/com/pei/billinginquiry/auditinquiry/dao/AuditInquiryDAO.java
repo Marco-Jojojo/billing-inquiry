@@ -1,6 +1,6 @@
-package com.pei.billinginquiry.billinginquiry.dao;
+package com.pei.billinginquiry.auditinquiry.dao;
 
-import com.pei.billinginquiry.billinginquiry.model.AuditInquiry;
+import com.pei.billinginquiry.auditinquiry.model.AuditInquiry;
 
 import java.util.List;
 

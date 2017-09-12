@@ -1,11 +1,10 @@
-package com.pei.billinginquiry.billinginquiry.controller;
+package com.pei.billinginquiry.auditinquiry.controller;
 
-import com.pei.billinginquiry.billinginquiry.model.AuditInquiry;
+import com.pei.billinginquiry.auditinquiry.model.AuditInquiry;
 import com.pei.billinginquiry.billinginquiry.model.SignedUrlParams;
-import com.pei.billinginquiry.billinginquiry.service.AuditInquiryService;
+import com.pei.billinginquiry.auditinquiry.service.AuditInquiryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,8 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import javax.print.attribute.standard.Media;
-import java.security.spec.RSAPublicKeySpec;
+import java.net.URLEncoder;
 import java.util.List;
 
 @Controller
@@ -40,6 +38,12 @@ public class AuditInquiryController {
     @RequestMapping( value="/generateSignedUrl" , consumes=MediaType.APPLICATION_JSON_VALUE ,
             produces=MediaType.APPLICATION_JSON_VALUE , method = RequestMethod.POST)
     public java.lang.Object generateSignedURL(@RequestBody SignedUrlParams signedUrlParams){
+        String certificatePassword = "yosemite";
+        String signatureFile = "peiaudit.jks";
+        StringBuilder parameterUrl = new StringBuilder();
+        parameterUrl.append("c=");
+        parameterUrl.append(URLEncoder.encode(signedUrlParams.getInterface()));
+
 
 
         throw new NotImplementedException();

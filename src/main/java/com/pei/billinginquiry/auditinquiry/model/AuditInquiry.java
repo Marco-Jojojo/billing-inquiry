@@ -1,4 +1,4 @@
-package com.pei.billinginquiry.billinginquiry.model;
+package com.pei.billinginquiry.auditinquiry.model;
 
 import java.io.Serializable;
 import java.util.Date;

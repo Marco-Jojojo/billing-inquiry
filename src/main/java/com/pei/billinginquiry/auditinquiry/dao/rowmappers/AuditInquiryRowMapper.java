@@ -1,6 +1,6 @@
-package com.pei.billinginquiry.billinginquiry.dao.rowmappers;
+package com.pei.billinginquiry.auditinquiry.dao.rowmappers;
 
-import com.pei.billinginquiry.billinginquiry.model.AuditInquiry;
+import com.pei.billinginquiry.auditinquiry.model.AuditInquiry;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

@@ -1,8 +1,8 @@
-package com.pei.billinginquiry.billinginquiry.service.impl;
+package com.pei.billinginquiry.auditinquiry.service.impl;
 
-import com.pei.billinginquiry.billinginquiry.dao.AuditInquiryDAO;
-import com.pei.billinginquiry.billinginquiry.model.AuditInquiry;
-import com.pei.billinginquiry.billinginquiry.service.AuditInquiryService;
+import com.pei.billinginquiry.auditinquiry.dao.AuditInquiryDAO;
+import com.pei.billinginquiry.auditinquiry.model.AuditInquiry;
+import com.pei.billinginquiry.auditinquiry.service.AuditInquiryService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
