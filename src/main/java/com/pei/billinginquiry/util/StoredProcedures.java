@@ -45,4 +45,8 @@ public class StoredProcedures {
 	public static final String 	GET_INTERIM_AUDITS_2 = "EXEC dbo.AuditQuery @SubmissionNumber = :SubmissionNumber , " +
 			" SubmissionNumber2 = :SubmissionNumber2";
 
+                  /**
+	 * Stored procedure to get the Insured Audit of a client.
+	 */
+	public static final String GET_INSURED_AUDIT = "EXEC dbo.InsuredAuditQuery @ClientNumber = ? ";
 }
