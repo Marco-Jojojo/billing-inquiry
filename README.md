@@ -41,3 +41,8 @@ In order to compile and run the application, please:
         "agencyCode": "72500",
         "policyKey": 100320
     }
+    
+    http://localhost:8080/InsuredBilling/RecentPayments/{clientId}
+    i.e.
+    http://localhost:8080/InsuredBilling/RecentPayments/21308
+    Method: GET
