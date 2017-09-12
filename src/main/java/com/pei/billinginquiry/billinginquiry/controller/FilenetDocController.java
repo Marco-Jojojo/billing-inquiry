@@ -2,7 +2,7 @@ package com.pei.billinginquiry.billinginquiry.controller;
 
 import com.pei.billinginquiry.billinginquiry.model.FilenetDoc;
 import com.pei.billinginquiry.billinginquiry.model.FilenetDocParams;
-import com.pei.billinginquiry.billinginquiry.service.FilenetDocService;
+import com.pei.billinginquiry.billinginquiry.service.FilenetDocServiceTest;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class FilenetDocController
 {
     @Autowired
-    private FilenetDocService filenetDocService;
+    private FilenetDocServiceTest filenetDocService;
     
     /**
      * Exposes Web Service in http://host:8080/BillingInquiry/GetFilenetDocByDateRange which receives the FilenetDocParams parameters: fromDate, toDate, and agencyCode.
