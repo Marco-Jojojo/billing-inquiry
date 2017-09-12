@@ -31,7 +31,7 @@ public class AuditInquiryController {
         return new HttpEntity<List<AuditInquiry>>( inquiries  );
     }
 
-    @RequestMapping(value = "/interimAudit2/{submissionNum}/{submissionNum2}")
+    @RequestMapping(value = "/interimAudit2/{submissionNum}/{submissionNum2}" , produces = MediaType.APPLICATION_JSON_VALUE , method = RequestMethod.GET)
     public HttpEntity<List<AuditInquiry>> interimAudit2(@PathVariable int submissionNum,@PathVariable int submissionNum2) {
         List<AuditInquiry> inquiries = auditInquiryService.findInterimAuditBySubmissionNumbers(submissionNum,submissionNum2);
         return new HttpEntity<List<AuditInquiry>>(inquiries);
