@@ -31,7 +31,6 @@ public class PolicyDetail implements Serializable {
 	private Timestamp ExpirationDate;
 	private int EstAnnPremium;
 	private Double Fees;
-	private Double TotalPaid;
 	private String PaymentPlanType;
 	private String PaymentPlanFrequency;
 	private String Status;
@@ -154,15 +153,6 @@ public class PolicyDetail implements Serializable {
 
 	public void setFees(final Double fees) {
 		Fees = fees;
-	}
-
-	@JsonProperty("TotalPaid")
-	public Double getTotalPaid() {
-		return TotalPaid;
-	}
-
-	public void setTotalPaid(final Double totalPaid) {
-		TotalPaid = totalPaid;
 	}
 
 	@JsonProperty("PaymentPlanType")

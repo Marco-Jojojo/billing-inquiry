@@ -53,7 +53,6 @@ public class PolicyDetailDAOImpl implements PolicyDetailDAO {
 			bd.setState(rs.getString("State"));
 			bd.setStatus(rs.getString("Status"));
 			bd.setStatusDate(rs.getTimestamp("StatusDate"));
-			bd.setTotalPaid(rs.getDouble("TotalPaid"));
 			bd.setUseCancelStatus(rs.getString("UseCancelStatus"));
 			bd.setUseReason(rs.getString("UseReason"));
 			bd.setUseStatusDate(rs.getString("UseStatusDate"));
