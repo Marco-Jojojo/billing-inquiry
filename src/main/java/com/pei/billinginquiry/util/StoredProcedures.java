@@ -27,4 +27,9 @@ public class StoredProcedures {
 	 * Stored procedure to get Policy Information
 	 */
 	public static final String GET_POLICY_DETAILS = "EXEC dbo.getPolicyDetail @AgencyCode = ?, @PolicyKey = ? ";
+
+	/**
+	 * Stored procedure to get the Recent Payments of a client.
+	 */
+	public static final String GET_RECENT_PAYMENTS = "EXEC dbo.RecentPayments @ClientID = ? ";
 }
