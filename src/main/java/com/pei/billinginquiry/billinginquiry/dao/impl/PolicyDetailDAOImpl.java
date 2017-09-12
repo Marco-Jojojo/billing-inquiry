@@ -24,8 +24,8 @@ public class PolicyDetailDAOImpl implements PolicyDetailDAO {
 
 	@Override
 	public List<PolicyDetail> getPolicyDetail(final String agencyCode, final int policyKey) {
-		final List<PolicyDetail> result = jdbcTemplate.query(StoredProcedures.GET_POLICY_DETAILS,
-		        new Object[] { agencyCode, policyKey }, new PolicyDetailMapper());
+		final List<PolicyDetail> result = jdbcTemplate.query(StoredProcedures.GET_POLICY_DETAIL,
+				new Object[] { agencyCode, policyKey }, new PolicyDetailMapper());
 		return result;
 	}
 
