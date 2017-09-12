@@ -19,6 +19,12 @@
     </parent>
     
     <dependencies>
+    	
+    	<!-- Hal browser -->
+    	<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-rest-hal-browser</artifactId>
+		</dependency>
         
         <!--JDBC template-->
         <dependency>

@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
 
 import com.pei.billinginquiry.billinginquiry.dao.PolicyDetailDAO;
 import com.pei.billinginquiry.billinginquiry.model.PolicyDetail;
@@ -16,16 +17,15 @@ import com.pei.billinginquiry.util.StoredProcedures;
  * @author alfonso.pech
  *
  */
+@Repository
 public class PolicyDetailDAOImpl implements PolicyDetailDAO {
-
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
 	@Override
 	public List<PolicyDetail> getPolicyDetail(final String agencyCode, final int policyKey) {
 		final List<PolicyDetail> result = jdbcTemplate.query(StoredProcedures.GET_POLICY_DETAILS,
-				new Object[] { agencyCode, policyKey }, new PolicyDetailMapper());
-
+		        new Object[] { agencyCode, policyKey }, new PolicyDetailMapper());
 		return result;
 	}
 
@@ -58,7 +58,6 @@ public class PolicyDetailDAOImpl implements PolicyDetailDAO {
 			bd.setUseReason(rs.getString("UseReason"));
 			bd.setUseStatusDate(rs.getString("UseStatusDate"));
 			bd.setZip(rs.getInt("Zip"));
-
 			return bd;
 		}
 	}
