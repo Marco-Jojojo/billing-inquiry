@@ -20,7 +20,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 import com.pei.billinginquiry.billinginquiry.dao.impl.FilenetDocDAOImpl;
-import com.pei.billinginquiry.billinginquiry.model.BillingData;
 import com.pei.billinginquiry.billinginquiry.model.FilenetDoc;
 import com.pei.billinginquiry.util.StoredProcedures;
 
@@ -40,14 +39,8 @@ public class FilenetDocDAOTest {
 	private static final String COMPANY_NUM = "100";
 	private JdbcTemplate jdbcTemplateMock = PowerMockito.mock(JdbcTemplate.class);
 	
-
 	@InjectMocks
 	private FilenetDocDAOImpl filenetDocDAOImpl;
-
-	@SuppressWarnings("unchecked")
-	@InjectMocks
-	private RowMapper<BillingData> billingDataMapperMock = PowerMockito.mock(RowMapper.class);
-
 
 	@SuppressWarnings({ "unchecked" })
 	@Test

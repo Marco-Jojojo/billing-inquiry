@@ -42,13 +42,8 @@ public class BillingDataDAOTest {
 	private static final Timestamp BILLING_TO_DATE = new Timestamp(System.currentTimeMillis());
 	private JdbcTemplate jdbcTemplateMock = PowerMockito.mock(JdbcTemplate.class);
 
-	@InjectMocks
+	@InjectMocks 
 	private BillingDataDAOImpl billingDataDAOImpl;
-
-	@SuppressWarnings("unchecked")
-	@InjectMocks
-	private RowMapper<BillingData> billingDataMapperMock = PowerMockito.mock(RowMapper.class);
-
 
 	@SuppressWarnings({ "unchecked" })
 	@Test

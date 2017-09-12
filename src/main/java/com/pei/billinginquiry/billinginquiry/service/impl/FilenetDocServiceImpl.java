@@ -3,7 +3,7 @@ package com.pei.billinginquiry.billinginquiry.service.impl;
 import com.pei.billinginquiry.billinginquiry.dao.FilenetDocDAO;
 import com.pei.billinginquiry.billinginquiry.model.FilenetDoc;
 import com.pei.billinginquiry.billinginquiry.model.FilenetDocParams;
-import com.pei.billinginquiry.billinginquiry.service.FilenetDocServiceTest;
+import com.pei.billinginquiry.billinginquiry.service.FilenetDocService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
  * @date Sep 7, 2017
  */
 @Service
-public class FilenetDocServiceImpl implements FilenetDocServiceTest
+public class FilenetDocServiceImpl implements FilenetDocService
 {
     @Autowired
     private FilenetDocDAO filenetDocDAO;
