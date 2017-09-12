@@ -28,8 +28,21 @@ public class StoredProcedures {
 	 */
 	public static final String GET_POLICY_DETAIL = "EXEC dbo.getPolicyDetail @AgencyCode = ?, @PolicyKey = ? ";
 
+
 	/**
 	 * Stored procedure to get the Recent Payments of a client.
 	 */
 	public static final String GET_RECENT_PAYMENTS = "EXEC dbo.RecentPayments @ClientID = ? ";
+
+	/**
+	 * Stored procedure for audit query
+	 */
+	public static final String GET_INTERIM_AUDITS = "EXEC dbo.AuditQuery @SubmissionNumber = :SubmissionNumber";
+
+	/**
+	 * Stored procedure for audit query 2
+	 */
+	public static final String 	GET_INTERIM_AUDITS_2 = "EXEC dbo.AuditQuery @SubmissionNumber = :SubmissionNumber , " +
+			" SubmissionNumber2 = :SubmissionNumber2";
+
 }
