@@ -1,4 +1,4 @@
-package com.pei.billinginquiry.billinginquiry.model;
+package com.pei.billinginquiry.auditinquiry.model;
 
 public class SignedUrlParams {
 
