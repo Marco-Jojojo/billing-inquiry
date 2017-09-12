@@ -15,12 +15,12 @@ import com.pei.billinginquiry.billinginquiry.service.PolicyDetailService;
 
 /**
  * Controller layer for policy Detail
- * 
+ *
  * @author alfonso.pech
  *
  */
 @RestController
-@RequestMapping("/PolicyDetail")
+@RequestMapping("/BillingInquiry")
 public class PolicyDetailController {
 
 	@Autowired
