@@ -21,7 +21,7 @@ In order to compile and run the application, please:
     
 http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange<br/>
 Method: POST<br/>
-Parameters (application/json media type):<br/>
+Parameters (application/json media type):
 ```json
 {
    "fromDate" : "2015-01-01",
@@ -32,7 +32,7 @@ Parameters (application/json media type):<br/>
 
 http://localhost:8080/BillingInquiry/GetBillingData<br/>
 Method: POST<br/>
-Parameters (application/json media type):<br/>
+Parameters (application/json media type)
 ```json
 {
     "agencyCode": "32000",
@@ -42,7 +42,7 @@ Parameters (application/json media type):<br/>
 
 http://localhost:8080/BillingInquiry/GetPolicyDetail<br/>
 Method: POST<br/>
-Parameters (application/json media type):<br/>
+Parameters (application/json media type):
 ```json
 {
     "agencyCode": "72500",
