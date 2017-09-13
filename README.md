@@ -16,10 +16,11 @@ In order to compile and run the application, please:
 4. The application will be exposed in http://localhost:8080/
 
 ### Web Services' callings:
+___
 
 #### **Billing Inquiry**
 
-**1) GetFileNetDocByDateRange**
+**1) GetFileNetDocByDateRange** <br/>
 http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange<br/>
 Method: POST<br/>
 Parameters (application/json media type):
@@ -31,7 +32,7 @@ Parameters (application/json media type):
 }
 ```
 
-**2) GetBillingData**
+**2) GetBillingData** <br/>
 http://localhost:8080/BillingInquiry/GetBillingData<br/>
 Method: POST<br/>
 Parameters (application/json media type)
@@ -42,7 +43,7 @@ Parameters (application/json media type)
 }
 ```
 
-**3) GetPolicyDetail**
+**3) GetPolicyDetail** <br/>
 http://localhost:8080/BillingInquiry/GetPolicyDetail<br/>
 Method: POST<br/>
 Parameters (application/json media type):
@@ -52,19 +53,20 @@ Parameters (application/json media type):
     "policyKey": 100320
 }
 ```
-
+___
 
 #### **Insured Billing**
 
-**1) RecentPayments**
+**1) RecentPayments** <br/>
 http://localhost:8080/InsuredBilling/RecentPayments/<b>{clientId}</b><br/>
 i.e.<br/>
 [http://localhost:8080/InsuredBilling/RecentPayments/21308]<br/>
 Method: GET<br/>
 
-**2) InsuredAuditQuery**
+**2) InsuredAuditQuery** <br/>
 http://localhost:8080/InsuredBilling/InsuredAuditQuery/<b>{clientId}</b><br/>
 i.e.<br/>
 http://localhost:8080/InsuredBilling/InsuredAuditQuery/80495<br/>
 Method: GET<br/>
 
+___
