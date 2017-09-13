@@ -89,7 +89,7 @@ public class AuditInquiryController {
         queryString.append("name=");
         queryString.append(URLEncoder.encode(signedUrlParams.getFirstName()+" "+signedUrlParams.getLastName()));
         queryString.append("email=");
-        queryString.append(URLEncoder.encode(signedUrlParams.getEmail());
+        queryString.append(URLEncoder.encode(signedUrlParams.getEmail()));
         return queryString.toString();
     }
 

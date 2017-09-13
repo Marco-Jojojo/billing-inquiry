@@ -1,4 +1,4 @@
-package com.pei.billinginquiry.auditinquiry.service
+package com.pei.billinginquiry.auditinquiry.service;
 
 import org.apache.tomcat.util.codec.binary.Base64;
 import sun.misc.BASE64Encoder;
