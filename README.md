@@ -70,3 +70,17 @@ http://localhost:8080/InsuredBilling/InsuredAuditQuery/80495<br/>
 Method: GET<br/>
 
 ___
+
+
+#### **AuditInquiry**
+
+**1) interimAudit**<br />
+http://localhost:8080//AuditInquiry//interimAudit/<b>{submissionNum}</b><br />
+i.e.<br />
+[http://localhost:8080//AuditInquiry//interimAudit/110457]<br />
+Method: GET<br />
+
+**2) InterimAudit2**<br />
+http://localhost:8080//AuditInquiry//interimAudit2/<b>{submissionNum}/{submissionNum2}</b><br />
+i.e.<br />
+[http://localhost:8080//AuditInquiry//interimAudit2/110457/576382]<br />
