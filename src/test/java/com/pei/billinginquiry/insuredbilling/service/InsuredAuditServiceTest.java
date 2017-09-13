@@ -1,6 +1,5 @@
 package com.pei.billinginquiry.insuredbilling.service;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -16,10 +15,6 @@ import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import com.pei.billinginquiry.billinginquiry.dao.impl.BillingDataDAOImpl;
-import com.pei.billinginquiry.billinginquiry.model.BillingData;
-import com.pei.billinginquiry.billinginquiry.model.BillingDataParams;
-import com.pei.billinginquiry.billinginquiry.service.impl.BillingDataServiceImpl;
 import com.pei.billinginquiry.insuredbilling.dao.impl.InsuredAuditDAOImpl;
 import com.pei.billinginquiry.insuredbilling.model.InsuredAudit;
 import com.pei.billinginquiry.insuredbilling.service.impl.InsuredAuditServiceImpl;
