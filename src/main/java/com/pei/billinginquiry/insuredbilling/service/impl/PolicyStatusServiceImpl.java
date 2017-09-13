@@ -3,6 +3,7 @@ package com.pei.billinginquiry.insuredbilling.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.pei.billinginquiry.insuredbilling.dao.PolicyStatusDAO;
 import com.pei.billinginquiry.insuredbilling.model.PolicyStatus;
@@ -12,6 +13,7 @@ import com.pei.billinginquiry.insuredbilling.service.PolicyStatusService;
  * @author alfonso.pech
  *
  */
+@Service
 public class PolicyStatusServiceImpl implements PolicyStatusService {
 
 	@Autowired

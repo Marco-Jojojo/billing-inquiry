@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
 
 import com.pei.billinginquiry.insuredbilling.dao.PolicyStatusDAO;
 import com.pei.billinginquiry.insuredbilling.model.PolicyStatus;
@@ -16,6 +17,7 @@ import com.pei.billinginquiry.util.StoredProcedures;
  * @author alfonso.pech
  *
  */
+@Repository
 public class PolicyStatusDAOImpl implements PolicyStatusDAO {
 
 	@Autowired
