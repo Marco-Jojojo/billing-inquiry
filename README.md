@@ -19,7 +19,7 @@ In order to compile and run the application, please:
 
 #### **Billing Inquiry**
     
-[http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange]<br/>
+http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange<br/>
 Method: POST<br/>
 Parameters (application/json media type):<br/>
 {<br/>
@@ -28,7 +28,7 @@ Parameters (application/json media type):<br/>
    "agencyCode": 32000<br/>
 }<br/>
 
-[http://localhost:8080/BillingInquiry/GetBillingData]<br/>
+http://localhost:8080/BillingInquiry/GetBillingData<br/>
 Method: POST<br/>
 Parameters (application/json media type):<br/>
 {<br/>
@@ -36,7 +36,7 @@ Parameters (application/json media type):<br/>
     "policyKey": 423193<br/>
 }<br/>
 
-[http://localhost:8080/BillingInquiry/GetPolicyDetail]<br/>
+http://localhost:8080/BillingInquiry/GetPolicyDetail<br/>
 Method: POST<br/>
 Parameters (application/json media type):<br/>
 {<br/>
@@ -53,7 +53,7 @@ i.e.<br/>
 Method: GET<br/>
 
 http://localhost:8080/InsuredBilling/InsuredAuditQuery/<b>{clientId}</b><br/>
-i.e.
-[http://localhost:8080/InsuredBilling/InsuredAuditQuery/80495]<br/>
+i.e.<br/>
+http://localhost:8080/InsuredBilling/InsuredAuditQuery/80495<br/>
 Method: GET<br/>
 
