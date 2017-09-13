@@ -18,7 +18,8 @@ In order to compile and run the application, please:
 ### Web Services' callings:
 
 #### **Billing Inquiry**
-    
+
+**1) GetFileNetDocByDateRange**
 http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange<br/>
 Method: POST<br/>
 Parameters (application/json media type):
@@ -30,6 +31,7 @@ Parameters (application/json media type):
 }
 ```
 
+**2) GetBillingData**
 http://localhost:8080/BillingInquiry/GetBillingData<br/>
 Method: POST<br/>
 Parameters (application/json media type)
@@ -40,6 +42,7 @@ Parameters (application/json media type)
 }
 ```
 
+**3) GetPolicyDetail**
 http://localhost:8080/BillingInquiry/GetPolicyDetail<br/>
 Method: POST<br/>
 Parameters (application/json media type):
@@ -53,11 +56,13 @@ Parameters (application/json media type):
 
 #### **Insured Billing**
 
+**1) RecentPayments**
 http://localhost:8080/InsuredBilling/RecentPayments/<b>{clientId}</b><br/>
 i.e.<br/>
 [http://localhost:8080/InsuredBilling/RecentPayments/21308]<br/>
 Method: GET<br/>
 
+**2) InsuredAuditQuery**
 http://localhost:8080/InsuredBilling/InsuredAuditQuery/<b>{clientId}</b><br/>
 i.e.<br/>
 http://localhost:8080/InsuredBilling/InsuredAuditQuery/80495<br/>
