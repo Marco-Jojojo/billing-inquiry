@@ -1,4 +1,4 @@
-package com.pei.billinginquiry.billinginquiry.dao.impl;
+package com.pei.billinginquiry.auditinquiry.dao.impl;
 
 import com.pei.billinginquiry.auditinquiry.dao.AuditInquiryDAO;
 import com.pei.billinginquiry.auditinquiry.dao.rowmappers.AuditInquiryRowMapper;
