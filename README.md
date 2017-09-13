@@ -50,6 +50,18 @@ Parameters (application/json media type):
     "policyKey": 100320
 }
 ```
+
+**4) GetPolicySearch** <br/>
+http://localhost:8080/pei/BillingInquiry/GetPolicySearch<br/>
+Method: POST<br/>
+Parameters (application/json media type):
+```json
+{
+    "agencyCode": "17000",
+    "partialPolicy": "100669",
+    "partialInsuredName": "COBB, DOERFLER & ASSOCIATES, C P A' S ( A CORP )"
+}
+```
 ___
 
 #### **Insured Billing**
