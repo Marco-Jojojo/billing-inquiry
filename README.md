@@ -77,9 +77,8 @@ Method: GET<br/>
 
 **4) CurrentTotalPaid** <br />
 http://localhost:8080/InsuredBilling/CurrentTotalPaid/<b>{submissionNumber}</b><br />
-[http://localhost:8080/InsuredBilling/CurrentTotalPaid/100320]<br/>
 i.e.<br/>
-
+[http://localhost:8080/InsuredBilling/CurrentTotalPaid/100320]<br/>
 Method: GET<br/>
 
 ___
