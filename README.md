@@ -15,34 +15,72 @@ In order to compile and run the application, please:
     3. Directly from the IDE
 4. The application will be exposed in http://localhost:8080/
 
-### Examples of WS callings:
+### Web Services' callings:
+___
 
-    http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange
-    Method: POST
-    Parameters (application/json media type):
-    {
-        "fromDate" : "2015-01-01",
-        "toDate" : "2017-09-07",
-        "agencyCode": 32000
-    }
+#### **Billing Inquiry**
 
-    http://localhost:8080/BillingInquiry/GetBillingData
-    Method: POST
-    Parameters (application/json media type):
-    {
-        "agencyCode": "32000",
-        "policyKey": 423193
-    }
-    
-    http://localhost:8080/BillingInquiry/GetPolicyDetail
-    Method: POST
-    Parameters (application/json media type):
-    {
-        "agencyCode": "72500",
-        "policyKey": 100320
-    }
-    
-    http://localhost:8080/InsuredBilling/RecentPayments/{clientId}
-    i.e.
-    http://localhost:8080/InsuredBilling/RecentPayments/21308
-    Method: GET
+**1) GetFileNetDocByDateRange** <br/>
+http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange<br/>
+Method: POST<br/>
+Parameters (application/json media type):
+```json
+{
+   "fromDate" : "2015-01-01",
+   "toDate" : "2017-09-07",
+   "agencyCode": 32000
+}
+```
+
+**2) GetBillingData** <br/>
+http://localhost:8080/BillingInquiry/GetBillingData<br/>
+Method: POST<br/>
+Parameters (application/json media type)
+```json
+{
+    "agencyCode": "32000",
+    "policyKey": 423193
+}
+```
+
+**3) GetPolicyDetail** <br/>
+http://localhost:8080/BillingInquiry/GetPolicyDetail<br/>
+Method: POST<br/>
+Parameters (application/json media type):
+```json
+{
+    "agencyCode": "72500",
+    "policyKey": 100320
+}
+```
+___
+
+#### **Insured Billing**
+
+**1) RecentPayments** <br/>
+http://localhost:8080/InsuredBilling/RecentPayments/<b>{clientId}</b><br/>
+i.e.<br/>
+[http://localhost:8080/InsuredBilling/RecentPayments/21308]<br/>
+Method: GET<br/>
+
+**2) InsuredAuditQuery** <br/>
+http://localhost:8080/InsuredBilling/InsuredAuditQuery/<b>{clientId}</b><br/>
+i.e.<br/>
+http://localhost:8080/InsuredBilling/InsuredAuditQuery/80495<br/>
+Method: GET<br/>
+
+___
+
+
+#### **AuditInquiry**
+
+**1) interimAudit**<br />
+http://localhost:8080//AuditInquiry//interimAudit/<b>{submissionNum}</b><br />
+i.e.<br />
+[http://localhost:8080//AuditInquiry//interimAudit/110457]<br />
+Method: GET<br />
+
+**2) InterimAudit2**<br />
+http://localhost:8080//AuditInquiry//interimAudit2/<b>{submissionNum}/{submissionNum2}</b><br />
+i.e.<br />
+[http://localhost:8080//AuditInquiry//interimAudit2/110457/576382]<br />

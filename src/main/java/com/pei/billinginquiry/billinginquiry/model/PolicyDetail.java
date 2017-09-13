@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author alfonso.pech
@@ -30,7 +31,6 @@ public class PolicyDetail implements Serializable {
 	private Timestamp ExpirationDate;
 	private int EstAnnPremium;
 	private Double Fees;
-	private Double TotalPaid;
 	private String PaymentPlanType;
 	private String PaymentPlanFrequency;
 	private String Status;
@@ -47,6 +47,7 @@ public class PolicyDetail implements Serializable {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy HH:mm:ss")
 	private Timestamp PendingDate;
 
+	@JsonProperty("PolicyKey")
 	public int getPolicyKey() {
 		return PolicyKey;
 	}
@@ -55,6 +56,7 @@ public class PolicyDetail implements Serializable {
 		PolicyKey = policyKey;
 	}
 
+	@JsonProperty("CustName")
 	public String getCustName() {
 		return CustName;
 	}
@@ -63,6 +65,7 @@ public class PolicyDetail implements Serializable {
 		CustName = custName;
 	}
 
+	@JsonProperty("Addr1")
 	public String getAddr1() {
 		return Addr1;
 	}
@@ -71,6 +74,7 @@ public class PolicyDetail implements Serializable {
 		Addr1 = addr1;
 	}
 
+	@JsonProperty("Addr2")
 	public String getAddr2() {
 		return Addr2;
 	}
@@ -79,6 +83,7 @@ public class PolicyDetail implements Serializable {
 		Addr2 = addr2;
 	}
 
+	@JsonProperty("City")
 	public String getCity() {
 		return City;
 	}
@@ -87,6 +92,7 @@ public class PolicyDetail implements Serializable {
 		City = city;
 	}
 
+	@JsonProperty("State")
 	public String getState() {
 		return State;
 	}
@@ -95,6 +101,7 @@ public class PolicyDetail implements Serializable {
 		State = state;
 	}
 
+	@JsonProperty("Zip")
 	public int getZip() {
 		return Zip;
 	}
@@ -103,6 +110,7 @@ public class PolicyDetail implements Serializable {
 		Zip = zip;
 	}
 
+	@JsonProperty("PolicyNo")
 	public String getPolicyNo() {
 		return PolicyNo;
 	}
@@ -111,6 +119,7 @@ public class PolicyDetail implements Serializable {
 		PolicyNo = policyNo;
 	}
 
+	@JsonProperty("EffectiveDate")
 	public Timestamp getEffectiveDate() {
 		return EffectiveDate;
 	}
@@ -119,6 +128,7 @@ public class PolicyDetail implements Serializable {
 		EffectiveDate = effectiveDate;
 	}
 
+	@JsonProperty("ExpirationDate")
 	public Timestamp getExpirationDate() {
 		return ExpirationDate;
 	}
@@ -127,6 +137,7 @@ public class PolicyDetail implements Serializable {
 		ExpirationDate = expirationDate;
 	}
 
+	@JsonProperty("EstAnnPremium")
 	public int getEstAnnPremium() {
 		return EstAnnPremium;
 	}
@@ -135,6 +146,7 @@ public class PolicyDetail implements Serializable {
 		EstAnnPremium = estAnnPremium;
 	}
 
+	@JsonProperty("Fees")
 	public Double getFees() {
 		return Fees;
 	}
@@ -143,14 +155,7 @@ public class PolicyDetail implements Serializable {
 		Fees = fees;
 	}
 
-	public Double getTotalPaid() {
-		return TotalPaid;
-	}
-
-	public void setTotalPaid(final Double totalPaid) {
-		TotalPaid = totalPaid;
-	}
-
+	@JsonProperty("PaymentPlanType")
 	public String getPaymentPlanType() {
 		return PaymentPlanType;
 	}
@@ -159,6 +164,7 @@ public class PolicyDetail implements Serializable {
 		PaymentPlanType = paymentPlanType;
 	}
 
+	@JsonProperty("PaymentPlanFrequency")
 	public String getPaymentPlanFrequency() {
 		return PaymentPlanFrequency;
 	}
@@ -167,6 +173,7 @@ public class PolicyDetail implements Serializable {
 		PaymentPlanFrequency = paymentPlanFrequency;
 	}
 
+	@JsonProperty("Status")
 	public String getStatus() {
 		return Status;
 	}
@@ -175,6 +182,7 @@ public class PolicyDetail implements Serializable {
 		Status = status;
 	}
 
+	@JsonProperty("StatusDate")
 	public Timestamp getStatusDate() {
 		return StatusDate;
 	}
@@ -183,6 +191,7 @@ public class PolicyDetail implements Serializable {
 		StatusDate = statusDate;
 	}
 
+	@JsonProperty("UseStatusDate")
 	public String getUseStatusDate() {
 		return UseStatusDate;
 	}
@@ -191,6 +200,7 @@ public class PolicyDetail implements Serializable {
 		UseStatusDate = useStatusDate;
 	}
 
+	@JsonProperty("CancelDate")
 	public Timestamp getCancelDate() {
 		return CancelDate;
 	}
@@ -199,6 +209,7 @@ public class PolicyDetail implements Serializable {
 		CancelDate = cancelDate;
 	}
 
+	@JsonProperty("UseCancelStatus")
 	public String getUseCancelStatus() {
 		return UseCancelStatus;
 	}
@@ -207,6 +218,7 @@ public class PolicyDetail implements Serializable {
 		UseCancelStatus = useCancelStatus;
 	}
 
+	@JsonProperty("UseReason")
 	public String getUseReason() {
 		return UseReason;
 	}
@@ -215,6 +227,7 @@ public class PolicyDetail implements Serializable {
 		UseReason = useReason;
 	}
 
+	@JsonProperty("CalcPending")
 	public String getCalcPending() {
 		return CalcPending;
 	}
@@ -223,6 +236,7 @@ public class PolicyDetail implements Serializable {
 		CalcPending = calcPending;
 	}
 
+	@JsonProperty("PendingApplies")
 	public String getPendingApplies() {
 		return PendingApplies;
 	}
@@ -231,6 +245,7 @@ public class PolicyDetail implements Serializable {
 		PendingApplies = pendingApplies;
 	}
 
+	@JsonProperty("PendingAmount")
 	public String getPendingAmount() {
 		return PendingAmount;
 	}
@@ -239,6 +254,7 @@ public class PolicyDetail implements Serializable {
 		PendingAmount = pendingAmount;
 	}
 
+	@JsonProperty("PendingDate")
 	public Timestamp getPendingDate() {
 		return PendingDate;
 	}
