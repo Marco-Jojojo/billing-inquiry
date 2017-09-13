@@ -20,40 +20,40 @@ In order to compile and run the application, please:
 #### **Billing Inquiry**
     
 [http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange]<br/>
-Method: POST
-Parameters (application/json media type):
-{
-   "fromDate" : "2015-01-01",
-   "toDate" : "2017-09-07",
-   "agencyCode": 32000
-}
+Method: POST<br/>
+Parameters (application/json media type):<br/>
+{<br/>
+   "fromDate" : "2015-01-01",<br/>
+   "toDate" : "2017-09-07",<br/>
+   "agencyCode": 32000<br/>
+}<br/>
 
-[http://localhost:8080/BillingInquiry/GetBillingData]
-Method: POST
-Parameters (application/json media type):
-{
-    "agencyCode": "32000",
-    "policyKey": 423193
-}
+[http://localhost:8080/BillingInquiry/GetBillingData]<br/>
+Method: POST<br/>
+Parameters (application/json media type):<br/>
+{<br/>
+    "agencyCode": "32000",<br/>
+    "policyKey": 423193<br/>
+}<br/>
 
-[http://localhost:8080/BillingInquiry/GetPolicyDetail]
-Method: POST
-Parameters (application/json media type):
-{
-    "agencyCode": "72500",
-    "policyKey": 100320
-}
+[http://localhost:8080/BillingInquiry/GetPolicyDetail]<br/>
+Method: POST<br/>
+Parameters (application/json media type):<br/>
+{<br/>
+    "agencyCode": "72500",<br/>
+    "policyKey": 100320<br/>
+}<br/>
 
 
 #### **Insured Billing**
 
-http://localhost:8080/InsuredBilling/RecentPayments/**{clientId}**
-i.e.
-[http://localhost:8080/InsuredBilling/RecentPayments/21308]
-Method: GET
+http://localhost:8080/InsuredBilling/RecentPayments/<b>{clientId}</b><br/>
+i.e.<br/>
+[http://localhost:8080/InsuredBilling/RecentPayments/21308]<br/>
+Method: GET<br/>
 
-http://localhost:8080/InsuredBilling/InsuredAuditQuery/**{clientId}**
+http://localhost:8080/InsuredBilling/InsuredAuditQuery/<b>{clientId}</b><br/>
 i.e.
-[http://localhost:8080/InsuredBilling/InsuredAuditQuery/80495]
-Method: GET
+[http://localhost:8080/InsuredBilling/InsuredAuditQuery/80495]<br/>
+Method: GET<br/>
 
