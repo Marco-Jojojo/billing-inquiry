@@ -44,7 +44,7 @@ public class PolicySearchServiceImpl implements PolicySearchService {
 		}
 		
 		if (policySearchParams.getPartialInsuredName().length() != 0) {
-			String partialInsuredName = "'"+ policySearchParams.getPartialInsuredName() +"'";
+			String partialInsuredName = "'%"+ policySearchParams.getPartialInsuredName().replace("'", "''") +"%'";
 			query.append(whereOrAnd);
 			query.append("(((dba.DBA_NAME IS NULL OR RTRIM(dba.DBA_NAME) = '') AND UPPER(ent.ENTITY_NAME) LIKE " + partialInsuredName + ") OR UPPER(dba.DBA_NAME) LIKE " + partialInsuredName + ") ");
 			whereOrAnd = "AND ";
@@ -52,6 +52,7 @@ public class PolicySearchServiceImpl implements PolicySearchService {
 		
 		query.append(whereOrAnd);
 		query.append("NOT EXISTS (SELECT * FROM SPR_LOCATION loc3 WHERE loc3.SUBMISSION_NUMBER = loc2.SUBMISSION_NUMBER AND loc3.ENTITY_NUMBER = loc2.ENTITY_NUMBER AND loc3.LOCATION < loc2.LOCATION AND loc3.PRIMARY_ADDRESS_IND = 'Y') ORDER BY p.EFFECTIVE_DATE desc");
+		System.out.println(query);
 		return query.toString();
 	}
 
