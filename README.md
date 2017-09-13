@@ -15,9 +15,11 @@ In order to compile and run the application, please:
     3. Directly from the IDE
 4. The application will be exposed in http://localhost:8080/
 
-### Examples of WS callings:
+### Web Services' callings:
 
-    http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange
+    #### **Billing Inquiry**
+    
+    [http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange]
     Method: POST
     Parameters (application/json media type):
     {
@@ -26,7 +28,7 @@ In order to compile and run the application, please:
         "agencyCode": 32000
     }
 
-    http://localhost:8080/BillingInquiry/GetBillingData
+    [http://localhost:8080/BillingInquiry/GetBillingData]
     Method: POST
     Parameters (application/json media type):
     {
@@ -34,7 +36,7 @@ In order to compile and run the application, please:
         "policyKey": 423193
     }
     
-    http://localhost:8080/BillingInquiry/GetPolicyDetail
+    [http://localhost:8080/BillingInquiry/GetPolicyDetail]
     Method: POST
     Parameters (application/json media type):
     {
@@ -42,13 +44,16 @@ In order to compile and run the application, please:
         "policyKey": 100320
     }
     
-    http://localhost:8080/InsuredBilling/RecentPayments/{clientId}
+
+    #### **Insured Billing**
+    
+    http://localhost:8080/InsuredBilling/RecentPayments/**{clientId}**
     i.e.
-    http://localhost:8080/InsuredBilling/RecentPayments/21308
+    [http://localhost:8080/InsuredBilling/RecentPayments/21308]
     Method: GET
     
-    http://localhost:8080/InsuredBilling/InsuredAuditQuery/{clientId}
+    http://localhost:8080/InsuredBilling/InsuredAuditQuery/**{clientId}**
     i.e.
-    http://localhost:8080/InsuredBilling/InsuredAuditQuery/80495
+    [http://localhost:8080/InsuredBilling/InsuredAuditQuery/80495]
     Method: GET
 
