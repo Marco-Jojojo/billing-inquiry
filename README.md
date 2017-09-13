@@ -17,7 +17,7 @@ In order to compile and run the application, please:
 
 ### Web Services' callings:
 
-    #### **Billing Inquiry**
+    #### <b>Billing Inquiry</b>
     
     [http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange]
     Method: POST
