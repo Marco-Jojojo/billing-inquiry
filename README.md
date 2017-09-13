@@ -22,27 +22,33 @@ In order to compile and run the application, please:
 http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange<br/>
 Method: POST<br/>
 Parameters (application/json media type):<br/>
-{<br/>
-   "fromDate" : "2015-01-01",<br/>
-   "toDate" : "2017-09-07",<br/>
-   "agencyCode": 32000<br/>
-}<br/>
+```json
+{
+   "fromDate" : "2015-01-01",
+   "toDate" : "2017-09-07",
+   "agencyCode": 32000
+}
+```
 
 http://localhost:8080/BillingInquiry/GetBillingData<br/>
 Method: POST<br/>
 Parameters (application/json media type):<br/>
-{<br/>
-    "agencyCode": "32000",<br/>
-    "policyKey": 423193<br/>
-}<br/>
+```json
+{
+    "agencyCode": "32000",
+    "policyKey": 423193
+}
+```
 
 http://localhost:8080/BillingInquiry/GetPolicyDetail<br/>
 Method: POST<br/>
 Parameters (application/json media type):<br/>
-{<br/>
-    "agencyCode": "72500",<br/>
-    "policyKey": 100320<br/>
-}<br/>
+```json
+{
+    "agencyCode": "72500",
+    "policyKey": 100320
+}
+```
 
 
 #### **Insured Billing**
