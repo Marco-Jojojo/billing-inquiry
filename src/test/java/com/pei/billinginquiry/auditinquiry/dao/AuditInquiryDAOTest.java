@@ -22,7 +22,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import com.pei.billinginquiry.auditinquiry.dao.rowmappers.AuditInquiryRowMapper;
 import com.pei.billinginquiry.auditinquiry.model.AuditInquiry;
-import com.pei.billinginquiry.billinginquiry.dao.impl.AuditInquiryDAOImpl;
+import com.pei.billinginquiry.auditinquiry.dao.impl.AuditInquiryDAOImpl;
 import com.pei.billinginquiry.util.StoredProcedures;
 
 /**

@@ -17,7 +17,7 @@ import org.powermock.modules.junit4.PowerMockRunner;
 
 import com.pei.billinginquiry.auditinquiry.model.AuditInquiry;
 import com.pei.billinginquiry.auditinquiry.service.impl.AuditInquiryServiceImpl;
-import com.pei.billinginquiry.billinginquiry.dao.impl.AuditInquiryDAOImpl;
+import com.pei.billinginquiry.auditinquiry.dao.impl.AuditInquiryDAOImpl;
 
 /**
  * 
