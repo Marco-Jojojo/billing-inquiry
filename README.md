@@ -19,7 +19,7 @@ In order to compile and run the application, please:
 
 #### **Billing Inquiry**
     
-[http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange]
+[http://localhost:8080/BillingInquiry/GetFilenetDocByDateRange]<br/>
 Method: POST
 Parameters (application/json media type):
 {
