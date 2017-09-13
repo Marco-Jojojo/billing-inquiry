@@ -39,7 +39,9 @@ public class AuditInquiryController {
         return new HttpEntity<List<AuditInquiry>>( inquiries  );
     }
 
-    @RequestMapping(value = "/interimAudit2/{submissionNum}/{submissionNum2}" , produces = MediaType.APPLICATION_JSON_VALUE , method = RequestMethod.GET)
+    @RequestMapping(value = "/interimAudit2/{submissionNum}/{submissionNum2}" ,
+            produces = MediaType.APPLICATION_JSON_VALUE ,
+            method = RequestMethod.GET)
     public HttpEntity<List<AuditInquiry>> interimAudit2(@PathVariable int submissionNum,@PathVariable int submissionNum2) {
         List<AuditInquiry> inquiries = auditInquiryService.findInterimAuditBySubmissionNumbers(submissionNum,submissionNum2);
         return new HttpEntity<List<AuditInquiry>>(inquiries);
@@ -47,7 +49,8 @@ public class AuditInquiryController {
 
     @RequestMapping( value="/generateSignedUrl" , consumes=MediaType.APPLICATION_JSON_VALUE ,
             produces=MediaType.APPLICATION_JSON_VALUE , method = RequestMethod.POST)
-    public java.lang.Object generateSignedURL(@RequestBody SignedUrlParams signedUrlParams) throws KeyStoreException, IOException, CertificateException, NoSuchAlgorithmException {
+    public java.lang.Object generateSignedURL(@RequestBody SignedUrlParams signedUrlParams) throws KeyStoreException,
+            IOException, CertificateException, NoSuchAlgorithmException {
         String certificatePassword = "yosemite";
         String signatureFile = "peiaudit.jks";
         String alias = "yosemite";
