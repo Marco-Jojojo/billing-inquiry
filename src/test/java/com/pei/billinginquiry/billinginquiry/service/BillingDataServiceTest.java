@@ -1,10 +1,6 @@
 package com.pei.billinginquiry.billinginquiry.service;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
-import static org.mockito.Matchers.eq;
-import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.verify;
 
