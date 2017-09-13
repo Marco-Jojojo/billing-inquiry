@@ -46,7 +46,7 @@ public class PolicySearchServiceImpl implements PolicySearchService {
 		if (policySearchParams.getPartialInsuredName().length() != 0) {
 			String partialInsuredName = "'"+ policySearchParams.getPartialInsuredName() +"'";
 			query.append(whereOrAnd);
-			query.append("(((dba.DBA_NAME IS NULL OR RTRIM(dba.DBA_NAME) = '') AND UCASE(ent.ENTITY_NAME) LIKE " + partialInsuredName + ") OR UCASE(dba.DBA_NAME) LIKE " + partialInsuredName + ") ");
+			query.append("(((dba.DBA_NAME IS NULL OR RTRIM(dba.DBA_NAME) = '') AND UPPER(ent.ENTITY_NAME) LIKE " + partialInsuredName + ") OR UPPER(dba.DBA_NAME) LIKE " + partialInsuredName + ") ");
 			whereOrAnd = "AND ";
 		}
 		
