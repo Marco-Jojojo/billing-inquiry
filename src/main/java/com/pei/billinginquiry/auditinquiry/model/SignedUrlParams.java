@@ -1,128 +1,127 @@
 package com.pei.billinginquiry.auditinquiry.model;
 
+/**
+ * this is a set of parameter used to get a signed url encoded and encrypted.
+ * 
+ * @author carlos.acosta
+ *
+ */
 public class SignedUrlParams {
+	private String _interface;
+	private String item;
+	private String policy;
+	private String firstName;
+	private String middleName;
+	private String lastName;
+	private String suffix;
+	private String title;
+	private String phone;
+	private String fax;
+	private String email;
+	private String solicitation;
+	private String multiAudits;
 
-    private String _interface;
-    private String item;
-    private String policy;
-    private String firstName;
-    private String middleName;
-    private String lastName;
-    private String suffix;
-    private String title;
-    private String phone;
-    private String fax;
-    private String email;
-    private String solicitation;
-    private String multiAudits;
+	public String getItem() {
+		return item;
+	}
 
+	public void setItem(final String item) {
+		this.item = item;
+	}
 
+	public String getPolicy() {
+		return policy;
+	}
 
+	public void setPolicy(final String policy) {
+		this.policy = policy;
+	}
 
-    public String getItem() {
-        return item;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public void setItem(String item) {
-        this.item = item;
-    }
+	public void setFirstName(final String firstName) {
+		this.firstName = firstName;
+	}
 
-    public String getPolicy() {
-        return policy;
-    }
+	public String getMiddleName() {
+		return middleName;
+	}
 
-    public void setPolicy(String policy) {
-        this.policy = policy;
-    }
+	public void setMiddleName(final String middleName) {
+		this.middleName = middleName;
+	}
 
-    public String getFirstName() {
-        return firstName;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public void setLastName(final String lastName) {
+		this.lastName = lastName;
+	}
 
-    public String getMiddleName() {
-        return middleName;
-    }
+	public String getSuffix() {
+		return suffix;
+	}
 
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
+	public void setSuffix(final String suffix) {
+		this.suffix = suffix;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	public void setTitle(final String title) {
+		this.title = title;
+	}
 
-    public String getSuffix() {
-        return suffix;
-    }
+	public String getPhone() {
+		return phone;
+	}
 
-    public void setSuffix(String suffix) {
-        this.suffix = suffix;
-    }
+	public void setPhone(final String phone) {
+		this.phone = phone;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public String getFax() {
+		return fax;
+	}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public void setFax(final String fax) {
+		this.fax = fax;
+	}
 
-    public String getPhone() {
-        return phone;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+	public void setEmail(final String email) {
+		this.email = email;
+	}
 
-    public String getFax() {
-        return fax;
-    }
+	public String getSolicitation() {
+		return solicitation;
+	}
 
-    public void setFax(String fax) {
-        this.fax = fax;
-    }
+	public void setSolicitation(final String solicitation) {
+		this.solicitation = solicitation;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getMultiAudits() {
+		return multiAudits;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setMultiAudits(final String multiAudits) {
+		this.multiAudits = multiAudits;
+	}
 
-    public String getSolicitation() {
-        return solicitation;
-    }
+	public void setInterface(final String _interface) {
+		this._interface = _interface;
+	}
 
-    public void setSolicitation(String solicitation) {
-        this.solicitation = solicitation;
-    }
-
-    public String getMultiAudits() {
-        return multiAudits;
-    }
-
-    public void setMultiAudits(String multiAudits) {
-        this.multiAudits = multiAudits;
-    }
-
-    public void setInterface(String _interface){
-        this._interface=_interface;
-    }
-
-    public String getInterface(){
-        return this._interface;
-    }
-
-
-
+	public String getInterface() {
+		return this._interface;
+	}
 }
