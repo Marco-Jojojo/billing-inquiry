@@ -69,6 +69,18 @@ i.e.<br/>
 http://localhost:8080/InsuredBilling/InsuredAuditQuery/80495<br/>
 Method: GET<br/>
 
+**3) PolicyStatus** <br />
+http://localhost:8080/InsuredBilling/PolicyStatus/<b>{submissionNumber}</b><br />
+i.e.<br/>
+[http://localhost:8080/InsuredBilling/PolicyStatus/100320]<br/>
+Method: GET<br/>
+
+**4) CurrentTotalPaid** <br />
+http://localhost:8080/InsuredBilling/CurrentTotalPaid/<b>{submissionNumber}</b><br />
+i.e.<br/>
+[http://localhost:8080/InsuredBilling/CurrentTotalPaid/100320]<br/>
+Method: GET<br/>
+
 ___
 
 

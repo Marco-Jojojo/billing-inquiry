@@ -28,7 +28,6 @@ public class StoredProcedures {
 	 */
 	public static final String GET_POLICY_DETAIL = "EXEC dbo.getPolicyDetail @AgencyCode = ?, @PolicyKey = ? ";
 
-
 	/**
 	 * Stored procedure to get the Recent Payments of a client.
 	 */
@@ -42,11 +41,21 @@ public class StoredProcedures {
 	/**
 	 * Stored procedure for audit query 2
 	 */
-	public static final String 	GET_INTERIM_AUDITS_2 = "EXEC dbo.AuditQuery @SubmissionNumber = :SubmissionNumber , " +
-			" SubmissionNumber2 = :SubmissionNumber2";
+	public static final String GET_INTERIM_AUDITS_2 = "EXEC dbo.AuditQuery @SubmissionNumber = :SubmissionNumber , "
+			+ " SubmissionNumber2 = :SubmissionNumber2";
 
-                  /**
+	/**
 	 * Stored procedure to get the Insured Audit of a client.
 	 */
 	public static final String GET_INSURED_AUDIT = "EXEC dbo.InsuredAuditQuery @ClientNumber = ? ";
+
+	/**
+	 * Stored procedure for CurrentTotalPaid
+	 */
+	public static final String GET_CURRENT_TOTAL_PAID = "EXEC dbo.CurrentTotalPaid @SubmissionNumber = ? ";
+
+	/**
+	 * Stored procedure for PolicyStatus
+	 */
+	public static final String GET_POLICY_STATUS = "EXEC dbo.PolicyStatus @SubmissionNumber = ? ";
 }
