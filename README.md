@@ -47,10 +47,8 @@ In order to compile and run the application, please:
     http://localhost:8080/InsuredBilling/RecentPayments/21308
     Method: GET
     
-    
-#### For invoking AuditInquiry methods the following url must be used to generate the following input:
+    http://localhost:8080/InsuredBilling/InsuredAuditQuery/{clientId}
+    i.e.
+    http://localhost:8080/InsuredBilling/InsuredAuditQuery/80495
+    Method: GET
 
-
-    http://localhost:8080/AuditInquiry/interimAudit/{submissionNumber}
-    
-    
