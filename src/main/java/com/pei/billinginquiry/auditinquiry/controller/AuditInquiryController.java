@@ -10,6 +10,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.MediaType;
@@ -21,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.pei.billinginquiry.auditinquiry.model.AuditInquiry;
 import com.pei.billinginquiry.auditinquiry.model.SignedUrlParams;
+import com.pei.billinginquiry.auditinquiry.model.UserDetailParameters;
 import com.pei.billinginquiry.auditinquiry.service.AuditInquiryService;
 import com.pei.billinginquiry.auditinquiry.service.CertificateSignService;
 
@@ -35,6 +38,7 @@ public class AuditInquiryController {
 	private AuditInquiryService auditInquiryService;
 	@Autowired
 	private CertificateSignService certificateSignService;
+	private static final SimpleDateFormat DATEFORMAT = new SimpleDateFormat("MM/dd/yyyy H:mm:ss");
 
 	/**
 	 * Exposes web service in
@@ -90,7 +94,8 @@ public class AuditInquiryController {
 	 *             operations on key stores.
 	 */
 	@RequestMapping(value = "/generateSignedUrl", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
-	public java.lang.Object generateSignedURL(@RequestBody final SignedUrlParams signedUrlParams)
+	public java.lang.Object generateSignedURL(@RequestBody final SignedUrlParams signedUrlParams,
+	        final HttpServletRequest request)
 	        throws KeyStoreException, IOException, CertificateException, NoSuchAlgorithmException {
 		final String certificatePassword = "yosemite";
 		final String signatureFile = "peiaudit.jks";
@@ -98,25 +103,35 @@ public class AuditInquiryController {
 		final String parameterUrl = this.generateParameterUrl(signedUrlParams);
 		final String signedData = certificateSignService.signData(parameterUrl, signatureFile, alias,
 		        certificatePassword);
-		return signedData;
+		return request.getRequestURL().toString() + "?" + signedData;
 	}
 
 	/**
 	 * no description yet.
-	 * 
+	 *
 	 * @param sUserId
 	 * @param sEmail
 	 * @param sPolicyToken
 	 * @return
 	 */
-	public java.lang.Object generateSignedURLTrupay(final java.lang.String sUserId, final java.lang.String sEmail,
-	        final java.lang.String sPolicyToken) {
-		throw new NotImplementedException();
+	public java.lang.Object generateSignedURLTrupay(@RequestBody final UserDetailParameters userParameters,
+	        final HttpServletRequest request) throws UnsupportedEncodingException {
+		final String dateCreated = AuditInquiryController.DATEFORMAT.format(new Date());
+		final String certificatePassword = "yosemite";
+		final String signatureFile = "peiaudit.jks";
+		final String alias = "yosemite";
+		final String urlParameters = "uid=" + URLEncoder.encode(userParameters.getUserId(), AuditInquiryController.UTF8)
+		        + "&emailid=" + URLEncoder.encode(userParameters.getEmail(), AuditInquiryController.UTF8)
+		        + "&policyHolderToken="
+		        + URLEncoder.encode(userParameters.getPolicyToken(), AuditInquiryController.UTF8) + "&id=500";
+		final String signedData = this.certificateSignService.signData(urlParameters, signatureFile, alias,
+		        certificatePassword);
+		return request.getRequestURL().toString() + "?" + signedData;
 	}
 
 	/**
 	 * no description yet
-	 * 
+	 *
 	 * @param encryptedURL
 	 * @return
 	 */
@@ -126,7 +141,7 @@ public class AuditInquiryController {
 
 	/**
 	 * no description yet
-	 * 
+	 *
 	 * @param encryptedURL
 	 * @return
 	 */
@@ -136,7 +151,7 @@ public class AuditInquiryController {
 
 	/**
 	 * no description yet
-	 * 
+	 *
 	 * @param signedUrlParams
 	 * @return
 	 * @throws UnsupportedEncodingException
@@ -145,21 +160,21 @@ public class AuditInquiryController {
 		final StringBuilder queryString = new StringBuilder();
 		queryString.append("c=");
 		queryString.append(URLEncoder.encode(signedUrlParams.getInterface(), AuditInquiryController.UTF8));
-		queryString.append("p=");
+		queryString.append("&p=");
 		queryString.append(URLEncoder.encode(signedUrlParams.getPolicy(), AuditInquiryController.UTF8));
-		queryString.append("a=");
+		queryString.append("&a=");
 		queryString.append(URLEncoder.encode(signedUrlParams.getSolicitation(), AuditInquiryController.UTF8));
-		queryString.append("n=");
-		final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy H:mm:ss");
-		queryString.append(URLEncoder.encode(simpleDateFormat.format(new Date()), AuditInquiryController.UTF8));
-		queryString.append("i=");
+		queryString.append("&n=");
+		queryString.append(
+		        URLEncoder.encode(AuditInquiryController.DATEFORMAT.format(new Date()), AuditInquiryController.UTF8));
+		queryString.append("&i=");
 		queryString.append(URLEncoder.encode(signedUrlParams.getItem(), AuditInquiryController.UTF8));
-		queryString.append("m=");
+		queryString.append("&m=");
 		queryString.append(URLEncoder.encode(signedUrlParams.getMultiAudits(), AuditInquiryController.UTF8));
-		queryString.append("name=");
+		queryString.append("&name=");
 		queryString.append(URLEncoder.encode(signedUrlParams.getFirstName() + " " + signedUrlParams.getLastName(),
 		        AuditInquiryController.UTF8));
-		queryString.append("email=");
+		queryString.append("&email=");
 		queryString.append(URLEncoder.encode(signedUrlParams.getEmail(), AuditInquiryController.UTF8));
 		return queryString.toString();
 	}

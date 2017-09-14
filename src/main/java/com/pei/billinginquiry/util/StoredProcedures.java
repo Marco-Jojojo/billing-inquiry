@@ -36,13 +36,13 @@ public class StoredProcedures {
 	/**
 	 * Stored procedure for audit query
 	 */
-	public static final String GET_INTERIM_AUDITS = "EXEC dbo.AuditQuery @SubmissionNumber = :SubmissionNumber";
+	public static final String GET_INTERIM_AUDITS = "EXEC dbo.AuditQuery @SubmissionNumber = ? ";
 
 	/**
 	 * Stored procedure for audit query 2
 	 */
-	public static final String GET_INTERIM_AUDITS_2 = "EXEC dbo.AuditQuery @SubmissionNumber = :SubmissionNumber , "
-			+ " SubmissionNumber2 = :SubmissionNumber2";
+	public static final String GET_INTERIM_AUDITS_2 = "EXEC dbo.AuditQuery2 @SubmissionNumber = ? , "
+			+ " SubmissionNumber2 = ? ";
 
 	/**
 	 * Stored procedure to get the Insured Audit of a client.

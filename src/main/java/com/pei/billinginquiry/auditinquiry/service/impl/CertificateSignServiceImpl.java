@@ -10,10 +10,13 @@ import org.springframework.stereotype.Service;
 
 import com.pei.billinginquiry.auditinquiry.service.CertificateSignService;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 /**
  * @author carlos.acosta
  *
  */
+@SuppressWarnings("restriction")
 @Service
 public class CertificateSignServiceImpl implements CertificateSignService {
 	/**
@@ -45,5 +48,10 @@ public class CertificateSignServiceImpl implements CertificateSignService {
 			}
 		}
 		return null;
+	}
+
+	public String decryptData(final String dataToDecrypt, final String keyFile, final String alias,
+	        final String password) {
+		throw new NotImplementedException();
 	}
 }
