@@ -49,6 +49,7 @@ public class StoredProcedures {
 	 */
 	public static final String GET_INSURED_AUDIT = "EXEC dbo.InsuredAuditQuery @ClientNumber = ? ";
 
+
 	/**
 	 * Stored procedure for CurrentTotalPaid
 	 */
@@ -58,4 +59,10 @@ public class StoredProcedures {
 	 * Stored procedure for PolicyStatus
 	 */
 	public static final String GET_POLICY_STATUS = "EXEC dbo.PolicyStatus @SubmissionNumber = ? ";
+	
+	/**
+	 * Stored procedure to get the Insured Billing of a client.
+	 */
+	public static final String GET_INSURED_BILLING = "EXEC dbo.InsuredBilling @ClientNumber = ? ";
+
 }

@@ -50,6 +50,18 @@ Parameters (application/json media type):
     "policyKey": 100320
 }
 ```
+
+**4) GetPolicySearch** <br/>
+http://localhost:8080/pei/BillingInquiry/GetPolicySearch<br/>
+Method: POST<br/>
+Parameters (application/json media type):
+```json
+{
+    "agencyCode": "17000",
+    "partialPolicy": "100669",
+    "partialInsuredName": "COBB, DOERFLER & ASSOCIATES, C P A' S ( A CORP )"
+}
+```
 ___
 
 #### **Insured Billing**
@@ -76,6 +88,12 @@ Method: GET<br/>
 http://localhost:8080/pei/InsuredBilling/CurrentTotalPaid/<b>{submissionNumber}</b><br />
 i.e.<br/>
 [http://localhost:8080/pei/InsuredBilling/CurrentTotalPaid/100320]<br/>
+Method: GET<br/>
+
+**5) InsuredBilling** <br/>
+http://localhost:8080/pei/InsuredBilling/InsuredBilling/<b>{clientId}</b><br/>
+i.e.<br/>
+[http://localhost:8080/pei/InsuredBilling/InsuredBilling/21308]<br/>
 Method: GET<br/>
 
 ___

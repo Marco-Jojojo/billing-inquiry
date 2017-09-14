@@ -1,8 +1,8 @@
 nbactions.xml
 target
 *.log
-.class
-.jar
+*.class
+*.jar
 .classpath
 .settings
 .project
