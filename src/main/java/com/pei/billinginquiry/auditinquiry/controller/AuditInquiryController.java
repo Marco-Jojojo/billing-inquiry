@@ -3,8 +3,7 @@ package com.pei.billinginquiry.auditinquiry.controller;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
+import java.security.*;
 import java.security.cert.CertificateException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,7 +24,6 @@ import com.pei.billinginquiry.auditinquiry.model.AuditInquiry;
 import com.pei.billinginquiry.auditinquiry.model.SignedUrlParams;
 import com.pei.billinginquiry.auditinquiry.model.UserDetailParameters;
 import com.pei.billinginquiry.auditinquiry.service.AuditInquiryService;
-import com.pei.billinginquiry.auditinquiry.service.CertificateSignService;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -36,8 +34,6 @@ public class AuditInquiryController {
 	private static final String UTF8 = "utf-8";
 	@Autowired
 	private AuditInquiryService auditInquiryService;
-	@Autowired
-	private CertificateSignService certificateSignService;
 	private static final SimpleDateFormat DATEFORMAT = new SimpleDateFormat("MM/dd/yyyy H:mm:ss");
 
 	/**
@@ -93,59 +89,28 @@ public class AuditInquiryController {
 	 *             if a key store algorithm does not exist when executing
 	 *             operations on key stores.
 	 */
-	@RequestMapping(value = "/generateSignedUrl", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
-	public java.lang.Object generateSignedURL(@RequestBody final SignedUrlParams signedUrlParams,
-	        final HttpServletRequest request)
-	        throws KeyStoreException, IOException, CertificateException, NoSuchAlgorithmException {
-		final String certificatePassword = "yosemite";
-		final String signatureFile = "peiaudit.jks";
-		final String alias = "yosemite";
-		final String parameterUrl = this.generateParameterUrl(signedUrlParams);
-		final String signedData = certificateSignService.signData(parameterUrl, signatureFile, alias,
-		        certificatePassword);
-		return request.getRequestURL().toString() + "?" + signedData;
-	}
-
-	/**
-	 * no description yet.
-	 *
-	 * @param sUserId
-	 * @param sEmail
-	 * @param sPolicyToken
-	 * @return
-	 */
-	public java.lang.Object generateSignedURLTrupay(@RequestBody final UserDetailParameters userParameters,
-	        final HttpServletRequest request) throws UnsupportedEncodingException {
-		final String dateCreated = AuditInquiryController.DATEFORMAT.format(new Date());
-		final String certificatePassword = "yosemite";
-		final String signatureFile = "peiaudit.jks";
-		final String alias = "yosemite";
-		final String urlParameters = "uid=" + URLEncoder.encode(userParameters.getUserId(), AuditInquiryController.UTF8)
-		        + "&emailid=" + URLEncoder.encode(userParameters.getEmail(), AuditInquiryController.UTF8)
-		        + "&policyHolderToken="
-		        + URLEncoder.encode(userParameters.getPolicyToken(), AuditInquiryController.UTF8) + "&id=500";
-		final String signedData = this.certificateSignService.signData(urlParameters, signatureFile, alias,
-		        certificatePassword);
-		return request.getRequestURL().toString() + "?" + signedData;
-	}
-
-	/**
-	 * no description yet
-	 *
-	 * @param encryptedURL
-	 * @return
-	 */
-	public java.lang.Object decryptURLTrupay(final java.lang.String encryptedURL) {
+	@RequestMapping(value = "/generateSignedUrl", consumes = MediaType.APPLICATION_JSON_VALUE,
+			produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
+	public String generateSignedURL(@RequestBody final SignedUrlParams signedUrlParams,final HttpServletRequest request){
 		throw new NotImplementedException();
 	}
 
-	/**
-	 * no description yet
-	 *
-	 * @param encryptedURL
-	 * @return
-	 */
-	public java.lang.Object decryptURLTrupay2(final java.lang.String encryptedURL) {
+	@RequestMapping(value = "/generateSignedURLTrupay", consumes = MediaType.APPLICATION_JSON_VALUE,
+			produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
+	public String generateSignedURLTrupay(@RequestBody final UserDetailParameters userParameters,
+													final HttpServletRequest request) {
+		throw new NotImplementedException();
+	}
+
+	@RequestMapping(value = "/decryptURLTrupay", consumes = MediaType.APPLICATION_JSON_VALUE,
+			produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
+	public String decryptURLTrupay(final java.lang.String encryptedURL) {
+		throw new NotImplementedException();
+	}
+
+	@RequestMapping(value = "/decryptURLTrupay2", consumes = MediaType.APPLICATION_JSON_VALUE,
+			produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
+	public String decryptURLTrupay2(final java.lang.String encryptedURL) {
 		throw new NotImplementedException();
 	}
 
