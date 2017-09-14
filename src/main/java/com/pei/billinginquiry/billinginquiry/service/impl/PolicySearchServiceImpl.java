@@ -52,7 +52,6 @@ public class PolicySearchServiceImpl implements PolicySearchService {
 		
 		query.append(whereOrAnd);
 		query.append("NOT EXISTS (SELECT * FROM SPR_LOCATION loc3 WHERE loc3.SUBMISSION_NUMBER = loc2.SUBMISSION_NUMBER AND loc3.ENTITY_NUMBER = loc2.ENTITY_NUMBER AND loc3.LOCATION < loc2.LOCATION AND loc3.PRIMARY_ADDRESS_IND = 'Y') ORDER BY p.EFFECTIVE_DATE desc");
-		System.out.println(query);
 		return query.toString();
 	}
 
