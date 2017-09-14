@@ -90,6 +90,12 @@ i.e.<br/>
 [http://localhost:8080/pei/InsuredBilling/CurrentTotalPaid/100320]<br/>
 Method: GET<br/>
 
+**5) InsuredBilling** <br/>
+http://localhost:8080/pei/InsuredBilling/InsuredBilling/<b>{clientId}</b><br/>
+i.e.<br/>
+[http://localhost:8080/pei/InsuredBilling/InsuredBilling/21308]<br/>
+Method: GET<br/>
+
 ___
 
 
