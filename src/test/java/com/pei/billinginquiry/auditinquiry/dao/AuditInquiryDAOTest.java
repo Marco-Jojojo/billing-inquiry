@@ -16,9 +16,7 @@ import org.mockito.InjectMocks;
 import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.pei.billinginquiry.auditinquiry.dao.rowmappers.AuditInquiryRowMapper;
 import com.pei.billinginquiry.auditinquiry.model.AuditInquiry;
@@ -43,21 +41,20 @@ public class AuditInquiryDAOTest {
 	private static final String SOLICITATION_NUMBER = "98777";
 	private static final String SOLICITATION_TYPE = "A";
 	private static final String STATUS = "NEW";
-	private NamedParameterJdbcTemplate jdbcTemplateMock = PowerMockito.mock(NamedParameterJdbcTemplate.class);
+	private JdbcTemplate jdbcTemplateMock = PowerMockito.mock(JdbcTemplate.class);
 
 	@InjectMocks
 	private AuditInquiryDAOImpl auditInquiryDAOImplMock;
 
-	@SuppressWarnings("unchecked")
 	@Test
 	public void findBySubmissionTest() {
 
-		when(jdbcTemplateMock.query(eq(StoredProcedures.GET_INTERIM_AUDITS), any(MapSqlParameterSource.class),
-				any(RowMapper.class))).thenReturn(generateAuditInquiryList());
+		when(jdbcTemplateMock.query(eq(StoredProcedures.GET_INTERIM_AUDITS), eq(new Object[] {SUBMISSION_NUM}),
+				any(AuditInquiryRowMapper.class))).thenReturn(generateAuditInquiryList());
 
 		List<AuditInquiry> result = auditInquiryDAOImplMock.findBySubmission(SUBMISSION_NUM);
 
-		verify(jdbcTemplateMock).query(eq(StoredProcedures.GET_INTERIM_AUDITS), any(MapSqlParameterSource.class),
+		verify(jdbcTemplateMock).query(eq(StoredProcedures.GET_INTERIM_AUDITS), eq(new Object[] {SUBMISSION_NUM}),
 				any(AuditInquiryRowMapper.class));
 
 		Assert.assertNotNull(result);
@@ -71,16 +68,15 @@ public class AuditInquiryDAOTest {
 		Assert.assertEquals(STATUS, result.get(0).getStatus());
 	}
 
-	@SuppressWarnings("unchecked")
 	@Test
 	public void findBySubmissionNumbersTest() {
 
-		when(jdbcTemplateMock.query(eq(StoredProcedures.GET_INTERIM_AUDITS_2), any(MapSqlParameterSource.class),
-				any(RowMapper.class))).thenReturn(generateAuditInquiryList());
+		when(jdbcTemplateMock.query(eq(StoredProcedures.GET_INTERIM_AUDITS_2), eq(new Object[] {SUBMISSION_NUM, SUBMISSION_NUM2}),
+				any(AuditInquiryRowMapper.class))).thenReturn(generateAuditInquiryList());
 
 		List<AuditInquiry> result = auditInquiryDAOImplMock.findBySubmissionNumbers(SUBMISSION_NUM, SUBMISSION_NUM2);
 
-		verify(jdbcTemplateMock).query(eq(StoredProcedures.GET_INTERIM_AUDITS_2), any(MapSqlParameterSource.class),
+		verify(jdbcTemplateMock).query(eq(StoredProcedures.GET_INTERIM_AUDITS_2), eq(new Object[] {SUBMISSION_NUM, SUBMISSION_NUM2}),
 				any(AuditInquiryRowMapper.class));
 
 		Assert.assertNotNull(result);
